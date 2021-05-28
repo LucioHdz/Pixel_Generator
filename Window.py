@@ -7,8 +7,10 @@ class Window:
         self.p= None
     
     def show(self):
+        window = turtle.Screen()
+        window.bgcolor("black")
         self.p = turtle.Turtle()
-        self.p.pencolor('#00a0ff')
+        self.p.pencolor('#ff05ea')
         self.p.pu()
         self.p.goto(self.origen,self.origen)
         self.p.pd()

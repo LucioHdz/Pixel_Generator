@@ -36,6 +36,16 @@ def menu():
 
 
 def cuadrilateros(option,b,h):
+    """Genera los puntos de cuadilateros con teorema de pitagoras para la altura
+
+    Args:
+        opcion (str): Algoritmo a usar
+        b (integer): base en pixeles
+        h (integer): altura en pixeles
+
+    Returns:
+        [list[list]]: matriz con las coordenadas [[[x],[y]]]
+    """
     x1 =[0,0]
     x2 =[0,h-1]
     x3 =[b-1,0]
@@ -58,7 +68,16 @@ def cuadrilateros(option,b,h):
         return [lado1_x,lado1_y,lado2_x,lado2_y,lado3_x,lado3_y,lado4_x,lado4_y]
     
 
-def triangulos_equilateros(opcion,b,h):
+def triangulos_equilateros(opcion,b):
+    """Genera los puntos del triangulo equilatero con teorema de pitagoras para la altura
+
+    Args:
+        opcion (str): Algoritmo a usar
+        b (integer): base en pixeles
+
+    Returns:
+        [list[list]]: matriz con las coordenadas [[[x],[y]]]
+    """
     x1 =[0,0]
     x = b/2
     y = ((b**2)-(x**2))**0.5
@@ -77,6 +96,16 @@ def triangulos_equilateros(opcion,b,h):
         return [lado1_x,lado1_y,lado2_x,lado2_y,lado3_x,lado3_y]
 
 def triangulos_rectangulos(opcion,b,h):
+    """Genera los puntos del triangulo rectangulo con teorema de pitagoras para la altura
+
+    Args:
+        opcion (str): Algoritmo a usar
+        b (integer): base en pixeles
+        h (integer): altura en pixeles
+
+    Returns:
+        [list[list]]: matriz con las coordenadas [[[x],[y]]]
+    """
     x1 =[0,0]
     x2 =[b-1,h-1]
     x3 =[b-1,0]
