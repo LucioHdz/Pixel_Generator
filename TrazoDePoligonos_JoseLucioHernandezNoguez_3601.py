@@ -16,7 +16,6 @@ def menu():
         2)rectangulo
         3)Triangulo equilatero
         4)Triangulo rectangulo
-        5)Poligono(N lados)
     """)
     options = int(input('   Option: '))
     
@@ -147,7 +146,7 @@ def options(opciones,algoritmo):
     elif opciones == 3:
         #equilatero
         steps = int(input(' base (px): '))
-        coordenadas = triangulos_equilateros(algoritmo,steps,steps)
+        coordenadas = triangulos_equilateros(algoritmo,steps)
         window.callpx(coordenadas[0],coordenadas[1])
         window.callpx(coordenadas[2],coordenadas[3])
         window.callpx(coordenadas[4],coordenadas[5])
@@ -160,9 +159,7 @@ def options(opciones,algoritmo):
         window.callpx(coordenadas[2],coordenadas[3])
         window.callpx(coordenadas[4],coordenadas[5])
         pass
-    elif opciones == 5:
-        # Poligono
-        pass
+    
     else:
         print ("Opción incorrecta, intente ejecutando de nuevo el programa")
         exit()
